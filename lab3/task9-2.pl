@@ -1,19 +1,12 @@
-=pod 9.
+=pod 9. 
 Создать две программы: 
 1. Первая передает второй строку чисел
 2. Вторая их суммирует и результат выводит на экран
-=cut
+=cut Вторая программа
 
-sub number_string {
-    return "10 4 5 20";
-}
+# принимаем строку чисел
+my $string = shift @ARGV;
 
-sub sum($) {
-    my ($string) = @_;
+my $sum = 0; $sum += $_ for split " ", $string;
 
-    $sum = 0; $sum += $_ for split " ", $string;
-    return $sum;
-}
-
-
-print sum number_string;
+print "Результат: $sum";
