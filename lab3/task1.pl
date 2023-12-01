@@ -13,7 +13,7 @@ while (my $line = <$in>) {
 	chomp $line;
 
 	foreach my $word (split " ", $line) {
-    	print $out "$word\n" if lc(substr($word, 0, 1)) eq 'в';
+    	print $out "$word\n" if lc(substr($word, -1, 1)) eq 'в';
 	}
 }
 
